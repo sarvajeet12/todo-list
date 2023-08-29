@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" href="./home.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>TODO LIST</h1>
+        </div>
+        
+        <div class="main">
+            <div class="input">
+                <form method="post" action="/addlist">
+                    <input type="text" name="name" id="name" placeholder="Write here..." required>
+                    <button>Add</button>
+                </form>
+            </div>
+            <div class="add">
+                <% if(datas.length>0){%>
+                    <% datas.forEach((data)=>{%>
+                        <div>
+                            <p><%= data.name %></p>
+                            <a href="/delete/<%= data._id %>">
+                                <button>x</button>
+                            </a>
+                        </div>
+                    <% }) %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

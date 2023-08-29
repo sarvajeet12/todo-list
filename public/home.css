@@ -1,0 +1,139 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00d2d3;
+}
+
+.container{
+
+    display: flex; justify-content: center; align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 40%;
+    
+}
+
+.heading{
+    /* border: 1px solid blue; */
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.main{
+    width: 100%;
+    padding: 30px;
+    background-color: #34495e;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+.input{
+    width: 100%;
+}
+
+.input form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input form input{
+    width: 75%;
+    height: 35px;
+    padding: 0px 10px;
+}
+
+.input form button{
+    cursor: pointer;
+    height: 35px;
+    width: 20%;
+    background-color: #f39c12;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+.input form button:hover{
+    background-color: #f1c40f;
+}
+
+.add{
+    border: 2px solid #f39c12;
+    padding: 5px 20px 20px 20px;
+    margin-top: 20px;
+    height: 400px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.add div{
+    background-color: #f39c12;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 15px;
+    padding: 5px 10px;
+}
+
+.add div button{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+
+
+/* media query */
+
+@media (max-width: 1000px){
+    
+.container{
+    width: 50%
+}
+}
+
+@media (max-width: 750px){
+    
+    .container{
+        width: 60%
+    }
+}
+
+@media (max-width: 600px){
+    
+    .container{
+        width: 70%
+    }
+}
+
+@media (max-width: 500px){
+    
+    .container{
+        width: 100%
+    }
+
+    .input form{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .input form input{
+        width: 100%;
+    }
+    
+    .input form button{
+        margin-top: 10px;
+        width: 50%;
+    }
+}
